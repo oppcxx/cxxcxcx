@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="zh-CN">
+<head>
+    <!--[if lte IE 9]>
+<meta http-equiv="refresh" content="0;url=http://example.com/warn.html">
+<![endif]-->
+<meta charset="utf-8">
+<meta http-equiv="X-DNS-Prefetch-Control" content="on">
+<link rel="dns-prefetch" href="http://example.com">
+<link rel="dns-prefetch" href="//www.google-analytics.com">
+<link rel="prefetch" href="http://example.com">
+<link rel="prefetch" href="//www.google-analytics.com">
+
+
+<link rel="prerender" href="http://example.com">
+
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+<meta http-equiv="mobile-agent" content="format=html5; url=http://example.com">
+<meta name="author" content="John Doe">
+
+<link rel="stylesheet" href="/css/JSimple.css">
+
+
+<link rel="shortcut icon" href="/images/favicon.png">
+
+
+<title>vue复习 - Hexo</title>
+
+<meta name="keywords" content="">
+
+<meta name="description " content="">
+
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                processEscapes: true
+            }
+        });
+    </script>
+
+
+    
+
+    
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body>
+<div id="nav">
+    <nav class="nav-menu">
+        <a class="site-name current" href="/" title="说">说</a>
+        <a class="site-index current" href="/"><i class="fa fa-home"></i><span>Home</span></a>
+        <a href="/archives" title="Archives"><i class="fa fa-archives"></i><span>Archives</span></a>
+        <a href="/tags" title="Tags"><i class="fa fa-tags"></i><span>Tags</span></a>
+        <!-- custom single page of menus -->
+        
+        
+        <a href="/help" title="帮助">
+            <i class="fa fa-question-circle"></i>
+            <span>帮助</span>
+        </a>
+        
+    </nav>
+</div>
+
+<div class="nav-user">
+    <a class="btn-search" href="#"><i class="fa fa-search"></i></a>
+    <a class="btn-read-mode" href="#"><i class="fa fa-sun-o"></i></a>
+    <a class="btn-sns-qr" href="javascript:"><i class="fa fa-weixin"></i></a>
+</div>
+
+<div id="wrapper" class="clearfix">
+    <div id="body">
+        <div class="main" id="main">
+            <div id="cover">
+    <div class="cover-img"></div>
+    <div class="cover-info">
+        
+        <h1 class="cover-siteName">说IT</h1>
+        <h3 class="cover-siteTitle">用代码摇滚这个世界</h3>
+        <p class="cover-siteDesc">一个关注技术与人文的IT博客</p>
+        <div class="cover-sns">
+            
+    &nbsp;&nbsp;<div class="btn btn-github">
+        <a href="https://github.com/tangkunyin" target="_blank" title="github" ref="friend">
+            <i class="fa fa-github"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-twitter">
+        <a href="https://twitter.com/tangkunyin" target="_blank" title="twitter" ref="friend">
+            <i class="fa fa-twitter"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-weibo">
+        <a href="https://weibo.com/tangkunyin" target="_blank" title="weibo" ref="friend">
+            <i class="fa fa-weibo"></i>
+        </a>
+    </div>
+
+    &nbsp;&nbsp;<div class="btn btn-instagram">
+        <a href="https://www.instagram.com/mtangsir/" target="_blank" title="instagram" ref="friend">
+            <i class="fa fa-instagram"></i>
+        </a>
+    </div>
+
+
+        </div>
+    </div>
+</div>
+
+            <div class="page-title">
+    <ul>
+        <li><a href="/">Recent Posts</a></li>
+        
+        
+        
+        <li class="page-search">
+    <form id="search" class="search-form">
+        <input type="text"
+               readonly="readonly"
+               id="local-search-input-tip"
+               placeholder="click to search..." />
+        <button type="button" disabled="disabled" class="search-form-submit"><i class="fa fa-search"></i></button>
+    </form>
+</li>
+
+    </ul>
+</div>
+<div class="main-inner">
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        <div class="post-header">
+            <div class="post-author clearfix">
+                <a class="avatar fleft" href="https://www.tangkunyin.com"
+                   target="_blank">
+                    <img width="48" src="/images/favicon.png" alt="avatar"/>
+                </a>
+                <p><span class="label">Author</span>
+                    <a href="https://www.tangkunyin.com"
+                       target="_blank">托码思</a>
+                    <span title="Last edited at&nbsp;2020-09-28">2020-09-28</span>
+                </p>
+                <p>一个写代码的「伪文人」</p>
+            </div>
+            <h2 class="post-title">vue复习</h2>
+            <div class="post-meta">
+                emm... 5440 words in the article |
+                you are the&nbsp;<span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>th friend who reading now
+            </div>
+        </div>
+        <div class="post-content markdown-body">
+            <h3 id="JWT"><a href="#JWT" class="headerlink" title="JWT"></a>JWT</h3><p>权限验证技术。JSON WebToken 是一个数据加密技术。是服务器端生成token的一种常见的手段</p>
+<p>token是令牌，我们在调用一些需要登录之后才能访问的api接口事，需要传递用户信息。为了传递当前的用户状态数据，可以在请求头中设置一个token值</p>
+<p>作为前端开发：我们在调用登录接口之后，服务器端会返回一个token数据，把这个数据存储在本地就好，以后调用接口的时候把这个token 在请求头中进行传递。需要注意一点，token服务器端给的是什么就存什么，千万不要自己随意修改。这个toekn是服务器加密之后的数据，只有服务器自己能解析，前端不需要解析。</p>
+<h4 id="在nodejs中使用jwt"><a href="#在nodejs中使用jwt" class="headerlink" title="在nodejs中使用jwt"></a>在nodejs中使用jwt</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i jsonwebtoken  <span class="comment"># 安装插件 生成jwt的插件</span></span><br><span class="line">npm i express-jwt   <span class="comment"># express的jwt验证中间件</span></span><br></pre></td></tr></table></figure>
+
+<p>注意事项</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// express-jwt 6.0更新之后需要加上一个配置项 algorithms 加密程序</span></span><br><span class="line"><span class="keyword">const</span> expressJWT = <span class="built_in">require</span>(<span class="string">&quot;express-jwt&quot;</span>);</span><br><span class="line">app.use(expressJWT(&#123; <span class="attr">secret</span>: <span class="string">&quot;yh-movie&quot;</span>, <span class="attr">algorithms</span>: [<span class="string">&quot;HS256&quot;</span>] &#125;));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 解析token</span></span><br><span class="line"><span class="keyword">const</span> jwt = <span class="built_in">require</span>(<span class="string">&#x27;jsonwebtoken&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> u = jwt.verify(req.headers[<span class="string">&quot;authorization&quot;</span>].split(<span class="string">&quot; &quot;</span>)[<span class="number">1</span>], <span class="string">&quot;yh-movie&quot;</span>); <span class="comment">// 获取token加密之间的数据</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">在前端页面调用接口的时候需要在请求头中设置一个属性</span><br><span class="line">此处的token值为用户登录之后服务器端返回的数据</span><br><span class="line">authorization 值为 Bearer token</span><br><span class="line"></span><br><span class="line">此处需要重点注意的事情是:</span><br><span class="line">1. 关于接口权限验证的内容，遇到问题的时候找提供接口的人。因为不同人开发的接口此处的写法都有差异</span><br><span class="line">2. 关于token全部都是服务器端直接生成的，至于里面是什么内容，不需要关心</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+<h2 id="实时获取最新数据"><a href="#实时获取最新数据" class="headerlink" title="实时获取最新数据"></a>实时获取最新数据</h2><ol>
+<li><p>轮询</p>
+<p>在客户端设置一个定时器，每隔一段时间向服务器发起请求，获取最新的数据</p>
+</li>
+<li><p>websocket长连接</p>
+<p>websocket是长连接，客户端可以和服务器建立起链接，连接成功之后，服务器端有最新的数据之后会主动的推送给客户端</p>
+</li>
+</ol>
+<h4 id="聊天室"><a href="#聊天室" class="headerlink" title="聊天室"></a>聊天室</h4><h1 id="vue"><a href="#vue" class="headerlink" title="vue"></a>vue</h1><h3 id="现状"><a href="#现状" class="headerlink" title="现状"></a>现状</h3><p>目前现在主流的前端开发框架：vue，react，angular</p>
+<ul>
+<li><p>vue</p>
+<p>作者是一个华人。vue在国内圈子中有非常高的人气，原因如下</p>
+<ol>
+<li>国人的情节</li>
+<li>文档友好</li>
+<li>入门简单</li>
+<li>有非常丰富的第三方插件和库</li>
+</ol>
+</li>
+<li><p>react</p>
+<p>是facebook出的一款针对view视图层的library库</p>
+<ol>
+<li>背景出身好</li>
+<li>react有非常成熟的项目案例和周边开发环境</li>
+<li>react更灵活，更能体现js的特性</li>
+<li>react想来来说学习成本比较高，不太适合新手</li>
+</ol>
+</li>
+<li><p>angular</p>
+<p>是google出的一款前端框架</p>
+</li>
+</ul>
+<h3 id="历史"><a href="#历史" class="headerlink" title="历史"></a>历史</h3><p>backbone 是一个前端mvc开发框架，基于jQuery+backbone+underscore+require.js</p>
+<p>easyui/jQueryUI 等这种框架</p>
+<p>FrameWork7</p>
+<h3 id="Vue"><a href="#Vue" class="headerlink" title="Vue"></a>Vue</h3><p><a target="_blank" rel="noopener" href="https://cn.vuejs.org/">https://cn.vuejs.org/</a></p>
+<p>是一个前端MVVM的开发框架，基于数据双向绑定实现。</p>
+<p>MVVM(Model View ViewModel)</p>
+<p>model用来存储数据</p>
+<p>view用来展示数据</p>
+<p>ViewModel视图模型层，当数据改变的时候自动更新视图,实现数据双向绑定</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&#x27;#app&#x27;</span>, <span class="comment">// 表示当前实例作用的html节点</span></span><br><span class="line">    data: &#123;</span><br><span class="line">        msg: <span class="string">&#x27;我是一段话&#x27;</span></span><br><span class="line">    &#125;<span class="comment">// 表示数据</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="指令"><a href="#指令" class="headerlink" title="指令"></a>指令</h3><ul>
+<li><p>v-model</p>
+</li>
+<li><p>v-model的原理：在实现技术上利用的是Object.defineProperty()，通过这个函数可以监听get，set事件，可以称它为基于依赖收集的观测机制。核心是VM，保证视图的一致性。采用数据劫持结合发布者-订阅者模式的方式，在数据变动时发布消息给订阅者，触发相应的监听回调。</p>
+<p>把data中的数据和form表单项进行双向绑定</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">  &lt;h5&gt;&#123;&#123;msg&#125;&#125;&lt;/h5&gt;</span><br><span class="line">  &lt;input type=<span class="string">&quot;text&quot;</span> v-model=<span class="string">&quot;msg&quot;</span> /&gt;</span><br><span class="line">  &lt;label <span class="keyword">for</span>=<span class="string">&quot;&quot;</span>&gt;红色&lt;input type=<span class="string">&quot;checkbox&quot;</span> v-model=<span class="string">&quot;color[0].checked&quot;</span>/&gt;&lt;/label&gt;</span><br><span class="line">  &lt;label <span class="keyword">for</span>=<span class="string">&quot;&quot;</span>&gt;黄色&lt;input type=<span class="string">&quot;checkbox&quot;</span> v-model=<span class="string">&quot;color[1].checked&quot;</span>/&gt;&lt;/label&gt;</span><br><span class="line">  &lt;p&gt;&#123;&#123;price+<span class="number">100</span>&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;./libs/vue.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      msg: <span class="string">&quot;&quot;</span>,</span><br><span class="line">      color: [</span><br><span class="line">        &#123;</span><br><span class="line">          id: <span class="number">1</span>,</span><br><span class="line">          name: <span class="string">&quot;红色&quot;</span>,</span><br><span class="line">          val: <span class="string">&quot;red&quot;</span>,</span><br><span class="line">          checked: <span class="literal">true</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          id: <span class="number">2</span>,</span><br><span class="line">          name: <span class="string">&quot;黄色&quot;</span>,</span><br><span class="line">          val: <span class="string">&quot;yellow&quot;</span>,</span><br><span class="line">          checked: <span class="literal">false</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">      ],</span><br><span class="line">      price: <span class="number">100</span>,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>v-for</p>
+<p>循环</p>
+<p>可以循环数字、字符串、数组、对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">  &lt;h5&gt;循环字符串&lt;/h5&gt;</span><br><span class="line">  &lt;p v-<span class="keyword">for</span>=<span class="string">&quot;(item,index) in content&quot;</span> :key=<span class="string">&quot;index&quot;</span>&gt;&#123;&#123;item&#125;&#125;---&#123;&#123;index&#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;hr /&gt;</span><br><span class="line">  &lt;h5&gt;循环数字&lt;/h5&gt;</span><br><span class="line">  &lt;p v-<span class="keyword">for</span>=<span class="string">&quot;(item,index) in 3&quot;</span> :key=<span class="string">&quot;index&quot;</span>&gt;&#123;&#123;item&#125;&#125;---&#123;&#123;index&#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;hr /&gt;</span><br><span class="line">  &lt;h5&gt;循环数组&lt;/h5&gt;</span><br><span class="line">  &lt;p v-<span class="keyword">for</span>=<span class="string">&quot;(item,index) in list&quot;</span> :key=<span class="string">&quot;index&quot;</span>&gt;&#123;&#123;item&#125;&#125;---&#123;&#123;index&#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;hr /&gt;</span><br><span class="line">  &lt;h5&gt;循环对象中的数组&lt;/h5&gt;</span><br><span class="line">  &lt;p v-<span class="keyword">for</span>=<span class="string">&quot;item in colors&quot;</span> :key=<span class="string">&quot;item.id&quot;</span>&gt;&#123;&#123;item.name&#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;hr /&gt;</span><br><span class="line">  &lt;p v-<span class="keyword">for</span>=<span class="string">&quot;(item,index) in person&quot;</span> :key=<span class="string">&quot;index&quot;</span>&gt;&#123;&#123;item&#125;&#125;---&#123;&#123;index&#125;&#125;&lt;/p&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;./libs/vue.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="comment">// v-for 可以循环 字符串 数字 数组 对象</span></span><br><span class="line">  <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    data: &#123;</span><br><span class="line">      content: <span class="string">&quot;海贼王&quot;</span>,</span><br><span class="line">      list: [<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>],</span><br><span class="line">      colors: [</span><br><span class="line">        &#123;</span><br><span class="line">          id: <span class="number">1</span>,</span><br><span class="line">          name: <span class="string">&quot;红色&quot;</span>,</span><br><span class="line">          val: <span class="string">&quot;red&quot;</span>,</span><br><span class="line">          checked: <span class="literal">true</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">        &#123;</span><br><span class="line">          id: <span class="number">2</span>,</span><br><span class="line">          name: <span class="string">&quot;黄色&quot;</span>,</span><br><span class="line">          val: <span class="string">&quot;red&quot;</span>,</span><br><span class="line">          checked: <span class="literal">true</span>,</span><br><span class="line">        &#125;,</span><br><span class="line">      ],</span><br><span class="line">      person: &#123;</span><br><span class="line">        name: <span class="string">&quot;小巴&quot;</span>,</span><br><span class="line">        skills: <span class="string">&quot;斩杀&quot;</span>,</span><br><span class="line">        fav: <span class="string">&quot;金币&quot;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>v-on：</p>
+<p>@ 用来绑定事件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"> &lt;div id=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">  &lt;!-- 事件如果不传参数，默认参数为event对象 --&gt;</span><br><span class="line">  &lt;button v-on:click=<span class="string">&quot;clickHandle&quot;</span>&gt;按钮&lt;/button&gt;</span><br><span class="line">  &lt;button @click=<span class="string">&quot;clickHandle(33)&quot;</span>&gt;按钮<span class="number">2</span>&lt;/button&gt;</span><br><span class="line">  &lt;input type=<span class="string">&quot;text&quot;</span> @keyup=<span class="string">&quot;keyUpHandle&quot;</span> /&gt;</span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script src=<span class="string">&quot;./libs/vue.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">  <span class="comment">// v-on 表示绑定事件，但是一般我们都会简写为@</span></span><br><span class="line">  <span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el: <span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    <span class="comment">// 此属性为方法，就是vue实例中所有可以直接调用的function</span></span><br><span class="line">    methods: &#123;</span><br><span class="line">      <span class="comment">// clickHandle: function () &#123;</span></span><br><span class="line">      <span class="comment">//   console.log(2222);</span></span><br><span class="line">      <span class="comment">// &#125;,</span></span><br><span class="line">      clickHandle(p) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(p);</span><br><span class="line">      &#125;,</span><br><span class="line">      keyUpHandle(e) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(e.keyCode);</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<ul>
+<li><p>v-bind</p>
+<p>:,用来绑定数据        </p>
+</li>
+</ul>
+
+            
+                
+
+            
+        </div>
+        <div class="post-tool">
+            <a class="btn-thumbs-up" href="javascript:void(0);" data-cid="52" title="95">
+                <i class="fa fa-thumbs-up" aria-hidden="true"></i> Donate
+            </a>
+        </div>
+        
+        <div class="post-tags">Tags：
+            
+        </div>
+        
+    </article>
+    
+        <p style="text-align: center">This article just represents my own viewpoint. If there is something wrong, please correct me.</p>
+    
+    
+    
+
+</div>
+
+<script src="/js/busuanzi.pure.mini.js"></script>
+
+
+
+        </div><!-- end #main-->
+    </div><!-- end #body -->
+    <footer class="footer">
+    <div class="footer-inner" style="text-align: center">
+        <p>
+            <a href="/about"  title="About">About</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <!-- 自定义链接 -->
+            <a href="/help" title="Help" >Help</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/links" title="Links">Links</a>&nbsp;&nbsp<em>·</em>&nbsp;&nbsp
+            <a href="/sitemap.xml" title="SiteMap">SiteMap</a>
+        </p>
+        <p>
+            Has been established&nbsp<a href="/timeline" id="siteBuildingTime"></a>&nbspDays，<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="licence">Based on Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)</a><br/>
+            ©2017-<span id="cpYear"></span> Based on&nbsp<a href="http://hexo.io" target="_blank" rel="nofollow">Hexo</a>
+            ，Theme by&nbsp&nbsp<a href="https://github.com/tangkunyin/hexo-theme-jsimple" target="_blank" rel="bookmark">JSimple</a>
+            ，Author&nbsp<a href="https://www.tangkunyin.com" target="_blank" rel="friend">托码思</a>
+            ，Hosted by <a href="https://pages.github.com/" target="_blank" rel="nofollow">GitHub Pages</a>
+        </p>
+    </div>
+</footer>
+
+<script src="/js/zepto.min.js"></script>
+
+
+<script src="/js/SimpleCore.js"></script>
+
+
+</div>
+<!-- search pop -->
+<div class="popup search-popup local-search-popup">
+    <div class="local-search-header clearfix">
+        <span class="search-icon">
+            <i class="fa fa-search"></i>
+        </span>
+        <span class="popup-btn-close">
+            <i class="fa fa-times-circle"></i>
+        </span>
+        <div class="local-search-input-wrapper">
+            <input id="local-search-input"
+                   spellcheck="false"
+                   type="text"
+                   autocomplete="off"
+                   placeholder="Input query keywords here..."/>
+        </div>
+    </div>
+    <div id="local-search-result"></div>
+</div>
+<div class="fixed-btn">
+    <a class="btn-gotop" href="javascript:"> <i class="fa fa-angle-up"></i></a>
+</div>
+<script>
+    $(function () {
+        var jsi_config = {
+            rootUrl: 'http://example.com/',
+            buildingTime: '01/20/2018',
+            current: $('.post-tags').length > 0 ? 'post' : 'archive',
+            snsQRCode: '/images/sns-qrcode.png',
+            donateImg: '/images/donate-qr.png',
+            localSearch: { dbPath: '' },
+            readMode: 'day'
+        };
+        
+            jsi_config.localSearch = {
+                dbPath: '/search.xml',
+                trigger: 'auto',
+                topN: '1',
+                unescape: 'false'
+            }
+        
+        SimpleCore.init(jsi_config);
+        
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+        
+    });
+</script>
+</body>
+</html>
