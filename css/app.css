@@ -722,11 +722,11 @@ body.loaded #sidebar .panel.active,
 .segments > .item.show {
   animation: slideUpBigIn 0.5s;
 }
-.slide-right-in,
-#tool.affix .play-list.show {
+.slide-right-in {
   animation: slideRightIn 0.3s;
 }
-.slide-left-in {
+.slide-left-in,
+#tool.affix .play-list.show {
   animation: slideLeftIn 0.3s;
 }
 .slide-down-in,
@@ -1912,7 +1912,6 @@ textarea {
   align-items: flex-start;
   display: flex;
   justify-content: space-between;
-  flex-direction: row-reverse;
 }
 @media (min-width: 1200px) {
   #main >.inner {
@@ -2360,7 +2359,7 @@ textarea {
 }
 #tool {
   position: fixed;
-  right: 1rem;
+  left: 1rem;
   top: 50vh;
   z-index: 9;
 }
@@ -2412,7 +2411,7 @@ textarea {
   position: fixed;
   display: none;
   bottom: 0;
-  right: 3.5rem;
+  left: 3.5rem;
   width: 50vw;
   z-index: 9;
   color: var(--text-color);
@@ -2609,7 +2608,7 @@ textarea {
   box-shadow: 0 0 0.5rem rgba(0,0,0,0.1);
   background: var(--grey-1-a3);
   border-radius: 0.3125rem;
-  right: 0;
+  left: 0;
   bottom: 0;
 }
 #tool.affix .item {
@@ -2627,11 +2626,11 @@ textarea {
   display: block;
 }
 #tool.affix .play-list {
-  right: 2.5rem;
+  left: 2.5rem;
 }
 @media (min-width: 1200px) {
   #tool.affix .play-list {
-    right: 3.5rem;
+    left: 3.5rem;
   }
 }
 @media (max-width: 991px) {
@@ -2642,6 +2641,11 @@ textarea {
 }
 #tool.affix .play-list.show {
   display: block;
+}
+@media (max-width: 991px) {
+  #tool.affix .play-list.show {
+    animation: slideRightIn 0.3s;
+  }
 }
 #tool.affix .back-to-top {
   align-items: center;
@@ -2659,7 +2663,7 @@ textarea {
 }
 @media (min-width: 1200px) {
   #tool.affix {
-    right: 1rem;
+    left: 1rem;
     bottom: 1rem;
   }
 }
@@ -3223,7 +3227,7 @@ textarea {
   margin: 0 auto;
   width: calc(100% - 0.625rem);
   position: relative;
-  padding-left: 16.25rem;
+  padding-right: 16.25rem;
 }
 @media (min-width: 1200px) {
   #footer .inner {
